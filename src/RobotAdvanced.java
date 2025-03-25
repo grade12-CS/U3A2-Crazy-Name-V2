@@ -46,7 +46,9 @@ public class RobotAdvanced extends Robot {
         super(city, x, y, Direction.NORTH, 0);
     }
 
+    //tracks the number of robot putting things
 	protected int nPlaced = 0;
+    //tracks the number of robot moved
 	protected int nMoved = 0;
 
     /**
@@ -117,10 +119,6 @@ public class RobotAdvanced extends Robot {
             super.move();
             nMoved ++;
         }, n);
-    }
-
-    public int clamp(int min, int max, int value) {
-        return (value > max) ? max : (value < min) ? min : value;
     }
 
     /**
